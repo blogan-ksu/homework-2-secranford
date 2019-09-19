@@ -1,3 +1,4 @@
+#!bin/bash
 #This program converts Fahrenheit to Celcius 
 
 export tempf=$1
@@ -8,4 +9,6 @@ echo $tempc "degrees Celcius"
 
 #add conversion to kelvin here, tempc + 273.15
 
+tempk=$(bc <<< "scale=4; ($tempc+273.15)")
 
+echo $tempk "degrees Kelvin"
